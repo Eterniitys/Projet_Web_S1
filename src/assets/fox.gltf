@@ -2991,7 +2991,7 @@
   ],
   "images": [
     {
-      "uri": "textures/fox_material_baseColor.png"
+      "uri": "src/assets/textures/fox_material_baseColor.png"
     }
   ],
   "materials": [
