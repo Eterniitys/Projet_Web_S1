@@ -6,10 +6,10 @@
 <!-- include ar.js for A-Frame -->
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
-  <a-assets>
-    <a-asset-item id="fox" src="src\assets\fox.gltf"></a-asset-item>
-  </a-assets>
   <a-scene embedded arjs>
+    <a-assets>
+      <a-asset-item id="fox" src="src\assets\fox.gltf"></a-asset-item>
+    </a-assets>
     <!-- use your gltf model -->
     <a-entity gltf-model="##fox"></a-entity>
     <!-- define a camera which will move according to the marker position -->
