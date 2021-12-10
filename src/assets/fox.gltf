@@ -2986,11 +2986,7 @@
   "buffers": [
     {
       "byteLength": 89364,
-<<<<<<< HEAD
-      "uri": "fox.bin"
-=======
-      "uri": "src/asstes/fox.bin"
->>>>>>> 87f79b9 (adding testing moddel)
+      "uri": "src/assets/fox.bin"
     }
   ],
   "images": [
