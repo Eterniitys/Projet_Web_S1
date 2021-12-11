@@ -1,10 +1,24 @@
-# Projet_Web_S1
+# projet_web_s1
 
-## Hosted by github
-https://eterniitys.github.io/Projet_Web_S1/
+## Project setup
+```
+npm install
+```
 
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-### Source
+### Compiles and minifies for production
+```
+npm run build
+```
 
-https://ar-js-org.github.io/AR.js-Docs/
-https://aframe.io/blog/arjs/
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
