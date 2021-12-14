@@ -27,7 +27,6 @@ export default {
   },
   data(){
     return {
-      timestamp : 0,
       radius : 1.0,
   }},
   computed: {
@@ -35,16 +34,14 @@ export default {
   },
   mounted: function(){
         console.log('mounted, started app loop');
-        // app loop calling gameMod.update
         var viewport = this;
-        var ts = this.timestamp;
+        // defining loop here
         var loop = function(){
             var now = new Date().getMilliseconds();
-            //secs = (now - this.timestamp) / 1000;
             setTimeout(loop, 33);
-            ts = now;
-            viewport.radius = ts / 1000 + 1 ;
+            viewport.radius = now / 1000 + 1 ;
         };
+        // starting loop here
         loop();
     }
 };
