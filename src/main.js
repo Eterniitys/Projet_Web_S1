@@ -2,9 +2,6 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import "./registerServiceWorker";
 
-import "aframe";
+//import "aframe";
 
-const app = createApp({});
-app.config.isCustomElement = ["a-scene"];
-
-createApp(App).mount("#app");
+createApp(App).mount("body");

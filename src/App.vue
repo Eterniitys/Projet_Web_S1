@@ -1,26 +1,20 @@
 <template>
-  <a-scene>
-    <a-entity camera look-controls></a-entity>
-    <a-sphere position="0 -0.75 -5" :radius="radius" color="#EF2D5E"></a-sphere>
-    <a-box
-      position="-1 -1 -3"
-      rotation="0 45 0"
-      width="1"
-      height="1"
-      depth="1"
-      color="#4CC3D9"
-    ></a-box>
-    <a-cylinder
-      position="1 -0.75 -3"
-      radius="0.5"
-      height="1.5"
-      color="#FFC65D"
-    ></a-cylinder>
-    <a-sky color="#ECECEC"></a-sky>
+  <a-scene embedded arjs>
+    <!-- Load Fox Model -->
+    <a-assets>
+      <a-asset-item id="model" :src="model"></a-asset-item>
+    </a-assets>
+    <a-marker preset='hiro'>
+      <!-- use your gltf model -->
+      <a-box position='5 0.5 0'></a-box>
+      <a-entity gltf-model="#model" scale="0.01 0.01 0.01" position='0 0.5 0'></a-entity>
+    </a-marker>
+    <a-entity camera ></a-entity>
   </a-scene>
 </template>
 
 <script>
+import model from "./assets/fox.gltf";
 export default {
   components: {
     // empty
@@ -28,6 +22,7 @@ export default {
   data(){
     return {
       radius : 1.0,
+      model
   }},
   computed: {
     
@@ -39,7 +34,7 @@ export default {
         var loop = function(){
             var now = new Date().getMilliseconds();
             setTimeout(loop, 33);
-            viewport.radius = now / 1000 + 1 ;
+            viewport.radius += (now / 1000);
         };
         // starting loop here
         loop();
