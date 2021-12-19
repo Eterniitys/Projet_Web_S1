@@ -1,45 +1,16 @@
 <template>
   <a-scene embedded arjs>
-    <!-- Load Fox Model -->
-    <!--a-assets>
-      <a-asset-item id="model" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
-    </a-assets-->
     <a-marker preset='hiro'>
       <!-- use your gltf model -->
-      <a-box position='5 0.5 0'></a-box>
-      <a-entity gltf-model="#model" scale="0.01 0.01 0.01" position='0 0.5 0'></a-entity>
-      <a-entity gltf-model="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf" scale="0.01 0.01 0.01" position='0 0.5 0'></a-entity>
+      <a-cylinder position="0 0.5 -10" color="crimson" height="3" radius="0.2" rotation="90 0 90" animation="property: position; dur: 10000; to: 0 0.5 10; loop: true"></a-cylinder>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="10" color="#7BC8A4" static-body></a-plane>
+      <a-cylinder position="0 0.5 0" rotation="0 0 0" height="1" radius="0.2" static-body></a-cylinder>
     </a-marker>
     <a-entity camera ></a-entity>
   </a-scene>
 </template>
 
 <script>
-//import model from "./assets/fox.gltf";
-export default {
-  components: {
-    // empty
-  },
-  data(){
-    return {
-      radius : 1.0,
-  }},
-  computed: {
-    
-  },
-  mounted: function(){
-        console.log('mounted, started app loop');
-        var viewport = this;
-        // defining loop here
-        var loop = function(){
-            var now = new Date().getMilliseconds();
-            setTimeout(loop, 33);
-            viewport.radius += (now / 1000);
-        };
-        // starting loop here
-        loop();
-    }
-};
 </script>
 
 <style>
