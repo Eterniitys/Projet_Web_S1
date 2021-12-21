@@ -32,8 +32,7 @@ Ce project est un site web contenant un jeu en réalité augmenté qui apparaît
 Vous voyez donc sur ce marker un parcours 3D où il faut exquiver des obstacles rouges en sauter pour celà poitner votre viseur sur le cylindre blanc et effectué une action d'input sur votre appareil.
 
 ### Problème rencontré
-
-Impossible d'importer un objet 3D dans notre project vue js car le project
-à besoin de loader particulier.
-
-Problème de compatibilité avec les appareils mobiles pour le système de pointeur qui saute à l'infini sans information d'input.
+- L'implémentation `vue.js` + `aframe` + `ar.js` à pris la quasi-totalité de notre temps pour qu'au finale leur compatibilitée ne soit pas compléte et nous oblige à simplifié le projet de base
+- Impossible d'importer un objet 3D dans notre project vue js car le project à besoin de loader particulier.
+- Une animation des polygones en utilisant les capacité de scripting de `vue.js`  n'a pas été possible car si on modifiais une propriété comme la possition tout en utilisant `ar.js` les polygones ne s'affichaient plus.
+- Problème de compatibilité avec les appareils mobiles pour le système de pointeur qui saute à l'infini sans information d'input.
